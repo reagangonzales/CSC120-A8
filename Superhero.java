@@ -2,7 +2,7 @@
  * A Superhero class representing Superman, implementing the Contract interface
  */
 public class Superhero implements Contract {
-    // Attributes to track state (e.g., health, current size, current location)
+    // Attributes to track state (health, current size, current location)
     private int health;
     private int size;
     private int xPosition;
@@ -19,7 +19,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Grabs an item (e.g., for carrying or saving someone)
+     * Grabs an item (for carrying or saving someone)
      * @param item the item to grab
      */
     public void grab(String item) {
@@ -38,7 +38,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Examines an item with super vision.
+     * Examines an item with super vision
      * @param item the item to examine
      */
     public void examine(String item) {
@@ -46,7 +46,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Uses an item, e.g., to assist or protect.
+     * Uses an item
      * @param item the item to use
      */
     public void use(String item) {
@@ -56,7 +56,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Walks in a direction, changing position slightly.
+     * Walks in a direction, changing position
      * @param direction the direction to walk in
      * @return true if the walk was successful
      */
@@ -72,7 +72,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Flies to a specific location with coordinates (x, y).
+     * Flies to a specific location with coordinates (x, y)
      * @param x the x-coordinate to fly to
      * @param y the y-coordinate to fly to
      * @return true if Superman reaches the destination
@@ -91,7 +91,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Shrinks in size (e.g., weakened or diminished power).
+     * Shrinks in size
      * @return the new size after shrinking
      */
     public Number shrink() {
@@ -101,7 +101,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Grows in size or strength.
+     * Grows in size or strength
      * @return the new size after growing
      */
     public Number grow() {
@@ -111,7 +111,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Rests to regain health.
+     * Rests to regain health
      */
     public void rest() {
         this.health = 100;
@@ -119,7 +119,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Undoes the last action (e.g., reverts a state change).
+     * Undo's all actions by resetting Superman's attributes
      */
     public void undo() {
         this.health = 100;
@@ -131,7 +131,8 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Main method to demonstrate the use of all methods in the Superhero class.
+     * Main method to demonstrate the use of all methods in the Superhero class
+     * Creates an instance of Superman!
      */
     public static void main(String[] args) {
         Superhero superman = new Superhero();
