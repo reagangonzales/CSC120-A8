@@ -58,15 +58,24 @@ public class Superhero implements Contract {
     /**
      * Walks in a direction, changing position
      * @param direction the direction to walk in
-     * @return true if the walk was successful
+     * @return true if the walk was successful, false if an invalid direction is given
      */
     public boolean walk(String direction) {
         System.out.println("Superman walks " + direction + " with purpose.");
-        // Example of changing position; you can make it more complex if desired
-        if (direction.equalsIgnoreCase("north")) yPosition += 1;
-        else if (direction.equalsIgnoreCase("south")) yPosition -= 1;
-        else if (direction.equalsIgnoreCase("east")) xPosition += 1;
-        else if (direction.equalsIgnoreCase("west")) xPosition -= 1;
+        
+        // Adjust position based on the direction
+        if ("north".equalsIgnoreCase(direction)) {
+            yPosition++;
+        } else if ("south".equalsIgnoreCase(direction)) {
+            yPosition--;
+        } else if ("east".equalsIgnoreCase(direction)) {
+            xPosition++;
+        } else if ("west".equalsIgnoreCase(direction)) {
+            xPosition--;
+        } else {
+            return false; // Invalid direction
+        }
+    
         System.out.println("Current Position: (" + xPosition + ", " + yPosition + ")");
         return true;
     }
@@ -132,9 +141,9 @@ public class Superhero implements Contract {
 
     /**
      * Main method to demonstrate the use of all methods in the Superhero class
-     * Creates an instance of Superman!
      */
     public static void main(String[] args) {
+        // Create an instance of Superman!
         Superhero superman = new Superhero();
         // Demonstrate grabbing an item
         superman.grab("boulder");
