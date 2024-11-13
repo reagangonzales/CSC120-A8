@@ -2,7 +2,7 @@
  * A Superhero class representing Superman, implementing the Contract interface
  */
 public class Superhero implements Contract {
-    // Attributes to track state (health, current size, current location)
+    // Attributes to track health, current size, current location
     private int health;
     private int size;
     private int xPosition;
@@ -19,7 +19,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Grabs an item (for carrying or saving someone)
+     * Grabs an item
      * @param item the item to grab
      */
     public void grab(String item) {
@@ -81,7 +81,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Flies to a specific location with coordinates (x, y)
+     * Flies to a specific location with coordinates x,y
      * @param x the x-coordinate to fly to
      * @param y the y-coordinate to fly to
      * @return true if Superman reaches the destination
@@ -110,7 +110,7 @@ public class Superhero implements Contract {
     }
 
     /**
-     * Grows in size or strength
+     * Grows in size
      * @return the new size after growing
      */
     public Number grow() {
